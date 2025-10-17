@@ -1,0 +1,21 @@
+[Bb]in/
+[Oo]bj/
+
+
+*.suo
+*.user
+*.userosf
+*.sln.docstates
+
+.vs/
+
+*.pdb # Arquivos de debug (Program Database)
+*.dll # Assemblies
+*.exe # Executáveis
+
+TestResults/
+.trx
+
+
+[Pp]ackages/
+.nuget/
