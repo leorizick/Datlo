@@ -1,5 +1,10 @@
 # Datlo - Sistema de Importação de arquivo CSV
 
+## Antes de rodar a aplicação rodar os comando no terminal:
+* **dotnet build**
+* **dotnet ef database update**
+
+## Arquitetura
 Esta aplicação foi construida utilizando arquitetura hexagonal voltada para casos de uso, após a conversa inicial que tivemos, cheguei a conclusão que esse padrão de projeto pode
 ser de extrema importancia para o futuro da Datlo, pois proporciona desacoplação com tecnologias externas, oq pode ser de grande utilidade para mudanças que provavelmente
 acontecem no desenvolvimento de uma startup. Da forma com que este projeto esta estruturado, ao mudar a tecnologia de banco de dados ou mensageria, somente a camada de persistencia
