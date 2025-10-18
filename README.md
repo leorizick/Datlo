@@ -30,8 +30,8 @@ A aplicação possui as seguintes hierarquias:
 Para lidar com um arquivo de importação grande utilizei um custom DataReader, para evitar de carregar o datatable completo na memória e permitir que o SqlBulkCopy leia os dados em Streaming e por lotes.
 
 ## Escalabilidade:
-Em um projeto real, em que realmente receba arquivos muito grandes eu optaria pela configuração de uma mensageria utilizando Kafka, configurando-o enviar estas mensagens em lotes para os topicos atraves de um timeout,
-assim garantindo a escalabilidade de varios workers para fazer a leitura dessas mensagens, evitando o lock da thread e podendo ser escalavel ao alocar mais ou menos workers conforme necessario.
+Em um projeto real, em que realmente receba arquivos muito grandes eu optaria pela configuração de uma mensageria utilizando Kafka, configurando-o enviar estas mensagens em lotes para os topicos atraves de um delay,
+assim garantindo a escalabilidade de varios workers para fazer a leitura dessas mensagens em lotes, evitando o lock da thread e podendo ser escalavel ao alocar mais ou menos workers conforme necessario.
 
 ## Testes:
 Para testes utilizei a biblioteca de Nunit para testes unitarios e o NSubstitute para mock de dados, para testes integrados poderia ser configurado um TestContainer juntamente com o docker.

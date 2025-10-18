@@ -76,7 +76,7 @@ namespace Datlo.Adapter.Out.FileProcessing
                 }
 
                 lote.Add(result);
-                if (lote.Count > BatchSize)
+                if (lote.Count >= BatchSize)
                 {
                     await onBatch.Invoke(lote);
                     lote.Clear();
